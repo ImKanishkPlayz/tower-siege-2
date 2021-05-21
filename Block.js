@@ -13,8 +13,11 @@ class Block{
     }
     display(){
       var pos= this.body.position;
-      rectMode(CENTER);
-      rect(pos.x,pos.y,this.width, this.height);
+      
+      if(this.body.speed < 3){ 
+        rectMode(CENTER); 
+        rect(pos.x,pos.y,this.width, this.height); 
+      }
 
       if(this.body.speed < 3){
         Block.display
